@@ -305,7 +305,7 @@ var getCoords = function() {
 // Zorgt dat het weer weergegevn wordt
 var getWeather = function(northLat, eastLng, southLat, westLng) {
   gettingData = true;
-  var requestString = "http://api.openweathermap.org/data/2.5/box/city?bbox="
+  var requestString = "https://api.openweathermap.org/data/2.5/box/city?bbox="
                       + westLng + "," + northLat + "," //left top
                       + eastLng + "," + southLat + "," //right bottom
                       + map.getZoom()
@@ -344,7 +344,7 @@ var jsonToGeoJson = function (weatherItem) {
       windSpeed: weatherItem.wind.speed,
       windDegrees: weatherItem.wind.deg,
       windGust: weatherItem.wind.gust,
-      icon: "http://openweathermap.org/img/w/"
+      icon: "https://openweathermap.org/img/w/"
             + weatherItem.weather[0].icon  + ".png",
       coordinates: [weatherItem.coord.Lon, weatherItem.coord.Lat]
     },

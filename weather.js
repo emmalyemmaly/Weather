@@ -311,7 +311,7 @@ var getWeather = function(northLat, eastLng, southLat, westLng) {
                       + map.getZoom()
                       + "&cluster=yes&format=json"
                       + "&APPID=" + openWeatherMapKey;
-  request = new XMLHttpsRequest();
+  request = new XMLHttpRequest();
   request.onload = proccessResults;
   request.open("get", requestString, true);
   request.send();
